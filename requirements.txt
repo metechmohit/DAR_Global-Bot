@@ -1,0 +1,2 @@
+# Small serving image. Collection/retrieval logic otherwise uses the standard library.
+waitress==3.0.2

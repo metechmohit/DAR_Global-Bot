@@ -1,0 +1,23 @@
+services:
+  atlas:
+    build:
+      context: .
+      args:
+        # Small deployment image by default. Local embeddings remain opt-in.
+        ENABLE_SEMANTIC: ${ENABLE_SEMANTIC:-0}
+    ports:
+      - "127.0.0.1:8000:8000"
+    env_file:
+      - .env
+    environment:
+      APP_ENV: production
+      HOST: 0.0.0.0
+      PORT: "8000"
+      REQUIRE_API_KEY: "1"
+      ATLAS_DEV_TOOLS: "0"
+    restart: unless-stopped
+    init: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL

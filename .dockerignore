@@ -1,0 +1,17 @@
+.git
+.venv
+.env
+.env.*
+!.env.example
+.cache
+**/__pycache__
+**/*.pyc
+**/*.log
+.DS_Store
+dar_g-transfer*.zip
+data/search.db*
+data/semantic
+data/processed
+data/crawl-state*.json
+tests
+README.md

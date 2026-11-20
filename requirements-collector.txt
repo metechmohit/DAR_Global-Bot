@@ -1,0 +1,3 @@
+# Used locally for rendered public pages and accessible brochure extraction.
+playwright==1.65.2
+pypdf==6.21.4

@@ -1,0 +1,42 @@
+{
+  "built_at": "2026-11-20T11:00:51.678366+00:00",
+  "records": 360,
+  "chunks": 558,
+  "raw_pages": 379,
+  "fetch_attempts": 403,
+  "failed_attempts": 290,
+  "by_source": {
+    "darglobal": 50,
+    "wasalt": 310
+  },
+  "by_kind": {
+    "article": 21,
+    "community": 1,
+    "index": 17,
+    "project": 61,
+    "daily_rental": 29,
+    "listing": 231
+  },
+  "by_city": {
+    "Muscat": 12,
+    "Dubai": 6,
+    "Ras Al Khaimah": 3,
+    "London": 1,
+    "Doha": 1,
+    "Cortesin": 1,
+    "Riyadh": 107,
+    "Benahavis": 1,
+    "Jeddah": 130,
+    "Makkah": 9,
+    "Khobar": 6,
+    "Dammam": 25,
+    "Madinah": 2,
+    "Abha": 2,
+    "Taif": 2
+  },
+  "collection_methods": {
+    "web_retrieval": 97,
+    "web_index_summary": 263
+  },
+  "coverage_note": "Partial collected corpus, not a complete or live market inventory. Research snapshots may be cached or partial. Prices and availability require source confirmation."
+}

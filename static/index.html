@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Source-grounded property research across DarGlobal and Wasalt.">
+  <title>Atlas — Property intelligence</title>
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="/style.css">
+  <script src="/history.js" defer></script>
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="/" aria-label="Atlas home"><img src="/favicon.svg" alt="" width="42" height="42"><span>atlas<span class="brand-period">.</span><small>PROPERTY INTELLIGENCE</small></span></a>
+    <button class="new-chat" id="new-chat"><span aria-hidden="true">＋</span> New conversation</button>
+    <p class="nav-label">WORKSPACE</p>
+    <nav><button class="nav-item active" id="chat-nav"><span aria-hidden="true">◌</span> Research assistant</button><button class="nav-item" id="browse-nav"><span aria-hidden="true">▦</span> Explore properties</button></nav>
+    <section class="conversation-history" aria-label="Saved conversations"><p class="nav-label">CONVERSATIONS</p><div id="conversation-list"></div><p id="history-empty" class="history-empty">Your conversations will appear here.</p></section>
+    <div class="sidebar-section"><p class="nav-label">CONNECTED SOURCES</p><div class="source-brand"><strong>DG</strong><span>DarGlobal<small>International developments</small></span></div><div class="source-brand"><strong class="wasalt-mark">و</strong><span>Wasalt<small>Saudi real estate marketplace</small></span></div></div>
+    <div class="sidebar-bottom"><p>Built on source evidence.</p><p>Designed for better decisions.</p><p class="history-hint">Conversations stay in this browser.</p></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><div class="topbar-left"><button id="menu-toggle" class="icon-button mobile-only" aria-label="Toggle navigation">☰</button><span class="breadcrumb">Workspace <span>/</span> <strong id="page-name">Research assistant</strong></span></div><div class="topbar-right"><button class="download-chat" id="download-chat" title="Download this conversation">Download chat</button><button class="language-button" id="language-toggle" title="Switch question language">العربية</button></div></header>
+    <main id="main">
+      <section id="chat-view" class="view">
+        <div id="welcome" class="welcome">
+          <div class="eyebrow"><span class="tiny-rule"></span> YOUR PROPERTY RESEARCH, CONNECTED</div>
+          <h1>A clearer view of<br>your next <em>property.</em></h1>
+          <p class="welcome-copy">Explore DarGlobal developments and Wasalt listings.<br>Ask naturally. Compare thoughtfully. Follow the evidence.</p>
+          <div class="source-pills"><span>DarGlobal</span><span>Wasalt</span><span>English & العربية</span></div>
+          <div class="suggestion-grid" id="suggestions">
+            <button data-prompt="Tell me about AIDA in Oman and its amenities"><span class="suggestion-icon">◈</span><strong>Discover a destination</strong><span>Explore AIDA’s communities and amenities</span></button>
+            <button data-prompt="Show apartments for sale in Jeddah under SAR 900,000"><span class="suggestion-icon">⌕</span><strong>Find a property</strong><span>Match a location, budget and property type</span></button>
+            <button data-prompt="Compare The Astera and DG1 developments"><span class="suggestion-icon">⇄</span><strong>Compare developments</strong><span>Look at differences, with source evidence</span></button>
+            <button data-prompt="ما هي مشاريع دار جلوبال في مسقط؟"><span class="suggestion-icon">文</span><strong>Research in Arabic</strong><span>اسأل بالعربية، وابحث بثقة</span></button>
+          </div>
+          <div class="welcome-foot"><span>Research at your pace</span><span>Source links included</span><span>Clear about what’s unknown</span></div>
+        </div>
+        <div id="messages" class="messages" aria-live="polite" aria-label="Conversation"></div>
+        <div class="composer-wrap"><div id="filter-chips" class="filter-chips"></div><form id="chat-form" class="composer"><label class="sr-only" for="message-input">Ask a property question</label><textarea id="message-input" rows="1" maxlength="1800" placeholder="Ask about a project, location, budget, or property…" dir="auto"></textarea><button id="send-button" type="submit" aria-label="Send question"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></form><p class="composer-note">Prices and availability can change. Confirm details with the listing provider.</p></div>
+      </section>
+      <section id="browse-view" class="view hidden"><div class="section-intro"><span class="eyebrow">EXPLORE THE PORTFOLIO</span><h1>Find your starting point.</h1><p>Find properties by location, budget and the details that matter to you.</p></div><form id="browse-form" class="browse-filters"><label>Source<select name="source"><option value="">All sources</option><option value="darglobal">DarGlobal</option><option value="wasalt">Wasalt</option></select></label><label>City<select name="city" id="city-select"><option value="">All cities</option></select></label><label>Property type<select name="property_type"><option value="">Any type</option><option>apartment</option><option>villa</option><option>land</option><option>floor</option><option>penthouse</option><option>chalet</option><option>building</option></select></label><label>Purpose<select name="purpose"><option value="">All purposes</option><option value="sale">For sale</option><option value="rent">Long-term rent</option><option value="daily_rent">Daily rental</option></select></label><label>Bedrooms<input name="bedrooms" type="number" min="0" max="50" placeholder="Any"></label><label>Max price<input name="price_max" type="number" min="0" placeholder="No limit"></label><label>Currency<select name="currency"><option value="">Select for budget</option><option>SAR</option><option>AED</option><option>USD</option><option>GBP</option><option>EUR</option><option>OMR</option></select></label><label>Price period<select name="price_period"><option value="">Any period</option><option value="total">Total price</option><option value="monthly">Monthly rent</option><option value="yearly">Yearly rent</option><option value="night">Per night</option></select></label><button class="primary-button" type="submit">Search portfolio</button></form><div id="browse-summary" class="browse-summary"></div><div id="browse-results" class="property-grid"></div><button class="secondary-button hidden" id="load-more">Load more</button></section>
+    </main>
+  </div>
+  <div id="compare-tray" class="compare-tray hidden"><span id="compare-count"></span><button id="compare-button" class="primary-button">Compare selected</button><button id="clear-compare" class="icon-button" aria-label="Clear selected properties">×</button></div>
+  <dialog id="record-dialog"><button id="close-dialog" class="dialog-close" aria-label="Close property details">×</button><div id="record-content"></div></dialog>
+  <div id="toast" class="toast hidden" role="status"></div>
+</body>
+</html>

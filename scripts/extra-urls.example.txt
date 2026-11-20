@@ -1,0 +1,8 @@
+# Additional verified public routes. Add your own inspected partitions here.
+https://wasalt.sa/en/sale/search?countryId=1&project=true&propertyFor=sale&type=residential
+https://wasalt.sa/en/properties-for-sale-in-riyadh
+https://wasalt.sa/en/properties-for-sale-in-jeddah
+https://wasalt.sa/en/properties-for-sale-in-dammam
+https://wasalt.sa/en/properties-for-daily-rental-in-jeddah
+https://darglobal.co.uk/product-category/trump-international-hotel-and-tower-dubai
+https://darglobal.co.uk/landing-page/aida

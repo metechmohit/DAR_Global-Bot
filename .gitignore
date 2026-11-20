@@ -1,0 +1,13 @@
+.env
+.env.*
+!.env.example
+.venv/
+.cache/
+__pycache__/
+*.pyc
+data/search.db*
+data/semantic/
+data/crawl-state*.json
+*.log
+.DS_Store
+dar_g-transfer*.zip
